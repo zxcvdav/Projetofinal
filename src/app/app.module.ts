@@ -16,6 +16,7 @@ import { environment } from 'src/environments/environment';
 import { DentalService } from './services/dental.service';
 
 
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,7 +27,8 @@ import { DentalService } from './services/dental.service';
     AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
     AngularFirestoreModule,
-    AngularFireStorageModule 
+    AngularFireStorageModule
+   
    
   ],
   providers: [

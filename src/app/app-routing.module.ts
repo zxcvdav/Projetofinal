@@ -46,7 +46,12 @@ const routes: Routes = [
   {
     path: 'dental-excluir/:id',
     loadChildren: () => import('./dental-excluir/dental-excluir.module').then( m => m.DentalExcluirPageModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   }
+
  
 ];
 
