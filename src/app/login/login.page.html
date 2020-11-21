@@ -1,10 +1,12 @@
 <ion-header>
   <ion-toolbar>
-  <ion-title>login</ion-title>
+    <ion-title>login</ion-title>
   </ion-toolbar>
-  </ion-header>
-  <ion-content>
+</ion-header>
+
+<ion-content>
   <form [formGroup]="formGroup">
+<<<<<<< HEAD
   <ion-item>
   <ion-label>Email</ion-label>
   <ion-input type="text" formControlName="username"></ion-input>
@@ -16,6 +18,20 @@
   <ion-button (click)="autenticar()" expand="full">Login</ion-button>
   <ion-button (click)="forgot()" expand="full">Esqueceu sua senha</ion-button>
  
+=======
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="text" formControlName="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Senha</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="autenticar()" expand="full">Login</ion-button>
+    <ion-button (click)="esquecesenha()" expand="full">Esqueceu Senha</ion-button>
+
+>>>>>>> c3a8fc450d95e8718607ad8304f0efd31f111ef6
   </form>
-  </ion-content>
-  
+</ion-content>
