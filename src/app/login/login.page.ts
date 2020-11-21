@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { NavController, MenuController } from '@ionic/angular';
 import { TemplateService } from '../services/template.service';
+import { Router } from '@angular/router';
 @Component({
 selector: 'app-login',
 templateUrl: './login.page.html',
@@ -14,11 +15,15 @@ constructor(private formBuilder : FormBuilder,
 private auth : AngularFireAuth,
 private navCtrl : NavController,
 private menuCtrl : MenuController,
-private template : TemplateService
+private template : TemplateService,
+private router: Router
 ) {
 this.iniciarForm();
 }
 ngOnInit() {
+}
+forgot(){
+  this.router.navigate(['/forgot-password']);
 }
 autenticar() {
 let user = this.formGroup.controls['username'].value;

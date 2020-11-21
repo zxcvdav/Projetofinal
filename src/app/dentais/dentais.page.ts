@@ -32,4 +32,7 @@ export class DentaisPage implements OnInit {
     this.navCtrl.navigateForward(['/dental-visualizar',dental.id])
   }
 
+
+
+  
 }
