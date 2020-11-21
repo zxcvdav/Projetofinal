@@ -11,7 +11,7 @@ export const environment = {
     appId: "1:136931920902:web:0046c414680a8f39e84787"
   }
  }; 
-=======
+======= 
   production: true, 
   firebase : {
     apiKey: "AIzaSyBP82qhUXtDTzoIMiHROdvPRj3fgVGl50o",
