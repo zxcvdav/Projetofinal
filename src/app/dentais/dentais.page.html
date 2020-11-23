@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dentais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let dental of lista">
+      <ion-label>{{dental.nome}}</ion-label>
+      <ion-button (click)="visualizar(dental)">Visualizar</ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

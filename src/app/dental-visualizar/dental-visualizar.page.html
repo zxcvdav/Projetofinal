@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>dental-visualizar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating">Nome</ion-label>
+    <ion-input disabled="true" value="{{dental.nome}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Link</ion-label>
+    <ion-input disabled="true" value="{{dental.link}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Endereco</ion-label>
+    <ion-input disabled="true" value="{{dental.endereco}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Número</ion-label>
+    <ion-input disabled="true" value="{{dental.numero}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cidade</ion-label>
+    <ion-input disabled="true" value="{{dental.cidade}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Estado</ion-label>
+    <ion-input disabled="true" value="{{dental.estado}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">E-mail</ion-label>
+    <ion-input disabled="true" value="{{dental.email}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Telefone</ion-label>
+    <ion-input disabled="true" value="{{dental.telefone}}"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="atualizar()" expand="full">Atualizar</ion-button>
+  <ion-button (click)="excluir()" expand="full">Excluir</ion-button>
+
+</ion-content>
