@@ -14,6 +14,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { environment } from 'src/environments/environment'; 
 import { DentalService } from './services/dental.service';
+import { CurriculoService } from './services/curriculo.service';
 
 
 
@@ -35,6 +36,7 @@ import { DentalService } from './services/dental.service';
     StatusBar,
     SplashScreen,
     DentalService,
+    CurriculoService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

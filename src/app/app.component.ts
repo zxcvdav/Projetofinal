@@ -18,11 +18,21 @@ export class AppComponent implements OnInit {
       icon: 'albums'
     },
     {
+      title: 'Currículos',
+      url: 'curriculos',
+      icon: 'clipboard'
+    },
+    {
       title: 'Nova Dental',
       url: 'dental-novo',
       icon: 'add-circle'
     },
     {
+      title: 'Novo Currículo',
+      url: 'curriculo-novo',
+      icon: 'create'
+    },
+    { 
       title: 'Sair',
       url: 'sair',
       icon: 'exit'

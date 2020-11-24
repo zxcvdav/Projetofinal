@@ -12,7 +12,7 @@ import { AlertController, LoadingController } from '@ionic/angular';
 
         loading = this.loadingCtrl.create({
             cssClass: 'my-custom-class',
-            message: 'Carregando...',
+            message: 'Carregando o processo...',
             duration: 2000
           });
 

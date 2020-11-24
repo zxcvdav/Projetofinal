@@ -17,14 +17,14 @@ export class DentaisPage implements OnInit {
 
   ngOnInit() {
     this.dentalServ.listaDeDentais().subscribe(response=>{
-      // O servidor respondeu
-      console.log(response); // remover, apenas para testar no console
+    
+      console.log(response); 
       this.lista = response;
-      console.log(this.lista); // remover, apenas para testar no console
+      console.log(this.lista); 
 
       
     },err=>{
-      // erro
+  
     })
   }
 

@@ -1,0 +1,40 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
+    <ion-title>Atualizar currículo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <form [formGroup]="formGroup">
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="person"></ion-icon> Nome</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="archive"></ion-icon> Arquivo</ion-label>
+      <ion-input type="text" formControlName="arquivo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="mail-open"></ion-icon> E-mail</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="floating"> <ion-icon name="call"></ion-icon> Telefone</ion-label>
+      <ion-input type="text" formControlName="telefone"></ion-input>
+    </ion-item>
+    
+    <ion-button (click)="atualizar()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
+      Atualizar
+       
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
+  </form>
+
+</ion-content>

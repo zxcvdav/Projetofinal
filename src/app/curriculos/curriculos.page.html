@@ -1,0 +1,24 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Currículos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let curriculo of lista">
+      <ion-label>{{curriculo.nome}}</ion-label>
+      <ion-button (click)="visualizar(curriculo)" color="tertiary" style="scroll-margin-top: 30px;" size="block">
+        Visualizar
+         
+        <ion-icon name="eye"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+  
+
+</ion-content>

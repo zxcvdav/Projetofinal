@@ -13,21 +13,19 @@ export class DentalService{
 
     listaDeDentais() : Observable<any>{
 
-        // Observable -> Aguardar resposta do servidor
-        return from(new Observable(observe =>{ // converter para Observable
+     
+        return from(new Observable(observe =>{ 
             
-            // this.firestore.collection('cliente') -> Selecionar a coleção no Firestore
-            // .snapshotChanges().subscribe -> Tentar buscar no servidor
-            // response -> dados baixados do servidor, os clientes
+            
             this.firestore.collection('dental').snapshotChanges().subscribe(response=>{
-                // transformar response em array de clientes
+               
                 let lista: Dental[] = [];
                 response.map(obj =>{
-                    // será repetido para cada registro, cada registro do Firestore se chama obj
+ 
                     let dental: Dental = new Dental();
-                   dental.setData(obj.payload.doc.data());// obj.payload.doc.data() -> Dados do dental
-                   dental.id = obj.payload.doc.id; // inserindo ID
-                    lista.push(dental); // adicionando o cliente na lista // push é adicionar
+                   dental.setData(obj.payload.doc.data());
+                   dental.id = obj.payload.doc.id; 
+                    lista.push(dental); 
                 });
                 observe.next(lista);
             })
@@ -37,7 +35,6 @@ export class DentalService{
 
     cadastrar(dental : any) : Observable<any>{
         return from(new Observable(observe => {
-            // add cria um novo documento
             this.firestore.collection('dental').add(dental).then(response=>{
                 observe.next("Cadastrado com sucesso!");
             },(err)=>{
@@ -49,7 +46,6 @@ export class DentalService{
 
     buscaPorId(id : any) : Observable<any>{
         return from(new Observable(observe => {
-            // .doc(id).snapshotChanges() -> Busca pelo id do documento
             this.firestore.collection('dental').doc(id).snapshotChanges().subscribe(response=>{
                 console.log(response);
                 let dental : Dental = new Dental();

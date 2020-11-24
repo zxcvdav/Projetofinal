@@ -32,6 +32,20 @@ const routes: Routes = [
     data : {authGuardPipe : redirectToLogin}
   },
   {
+    path: 'curriculos',
+    loadChildren: () => import('./curriculos/curriculos.module')
+      .then( m => m.CurriculosPageModule),
+    canActivate : [AngularFireAuthGuard],
+    data : {authGuardPipe : redirectToLogin}
+  },
+  {
+    path: 'curriculo-novo',
+    loadChildren: () => import('./curriculo-novo/curriculo-novo.module')
+      .then( m => m.CurriculoNovoPageModule),
+    canActivate : [AngularFireAuthGuard],
+    data : {authGuardPipe : redirectToLogin}
+  },
+  {
     path: 'sair',
     loadChildren: () => import('./sair/sair.module').then( m => m.SairPageModule)
   },
@@ -50,8 +64,24 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'curriculo-visualizar/:id',
+    loadChildren: () => import('./curriculo-visualizar/curriculo-visualizar.module').then( m => m.CurriculoVisualizarPageModule)
+  },  
+  {
+    path: 'curriculo-atualizar/:id',
+    loadChildren: () => import('./curriculo-atualizar/curriculo-atualizar.module').then( m => m.CurriculoAtualizarPageModule)
+  },
+  {
+    path: 'curriculo-excluir/:id',
+    loadChildren: () => import('./curriculo-excluir/curriculo-excluir.module').then( m => m.CurriculoExcluirPageModule)
+  },
+  {
+    path: 'upload',
+    loadChildren: () => import('./upload/upload.module').then( m => m.UploadPageModule)
   }
-
+  
  
 ];
 
