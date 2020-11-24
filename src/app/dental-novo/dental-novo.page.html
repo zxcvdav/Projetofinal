@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -12,47 +12,51 @@
   <form [formGroup]="formGroup">
 
     <ion-item>
-      <ion-label position="floating">Nome</ion-label>
+      <ion-label position="floating"><ion-icon name="person"></ion-icon> Nome</ion-label>
       <ion-input type="text" formControlName="nome"></ion-input>
     </ion-item>
 
 
     <ion-item>
-      <ion-label position="floating">Link</ion-label>
+      <ion-label position="floating"><ion-icon name="link"></ion-icon> Link</ion-label>
       <ion-input type="text" formControlName="link"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Endereco</ion-label>
+      <ion-label position="floating"><ion-icon name="home"></ion-icon> Endereco</ion-label>
       <ion-input type="text" formControlName="endereco"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Número</ion-label>
+      <ion-label position="floating"><ion-icon name="pin"></ion-icon> Número</ion-label>
       <ion-input type="text" formControlName="numero"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Cidade</ion-label>
+      <ion-label position="floating"><ion-icon name="navigate"></ion-icon> Cidade</ion-label>
       <ion-input type="text" formControlName="cidade"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Estado</ion-label>
+      <ion-label position="floating"><ion-icon name="globe"></ion-icon> Estado</ion-label>
       <ion-input type="text" formControlName="estado"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">E-mail</ion-label>
+      <ion-label position="floating"><ion-icon name="mail-open"></ion-icon> E-mail</ion-label>
       <ion-input type="text" formControlName="email"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label position="floating">Telefone</ion-label>
+      <ion-label  position="floating"> <ion-icon name="call"></ion-icon> Telefone</ion-label>
       <ion-input type="text" formControlName="telefone"></ion-input>
     </ion-item>
 
-    <ion-button (click)="cadastrar()" expand="full">Cadastrar</ion-button>
+    <ion-button (click)="cadastrar()" color="tertiary" style="scroll-margin-top: 30px;" size="block">
+      cadastrar
+       
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
   </form>
 
 </ion-content>
