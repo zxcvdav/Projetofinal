@@ -1,6 +1,6 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>dental-excluir</ion-title>
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary"> 
+    <ion-title>Dental excluir</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,6 +9,10 @@
     <ion-label>Deseja excluir {{dental.nome}}?</ion-label>
   </ion-item>
 
-  <ion-button (click)="excluir()" expand="full">Excluir</ion-button>
+  <ion-button (click)="excluir()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
+    Excluir
+     
+    <ion-icon name="close"></ion-icon>
+  </ion-button>
 
 </ion-content>

@@ -1,23 +1,34 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div class="col-md-6 " id="imgion">
+    <img src="https://s2.glbimg.com/meLd5g8VD9GgLGfGuRuv3UHBZ3I=/0x0:2000x1378/984x0/smart/filters:strip_icc()/s.glbimg.com/es/ge/f/original/2019/11/23/2019-11-23t224502z_459218957_rc2ahd9a56v4_rtrmadp_3_soccer-libertadores-fla-riv-report_3BAkRJL.jpg
+    " alt="logo do app dental" id="imgion">
+  </div>
   <form [formGroup]="formGroup">
-
   <ion-item>
-  <ion-label>juan</ion-label>
+  <ion-label>Email</ion-label>
   <ion-input type="text" formControlName="username"></ion-input>
   </ion-item>
   <ion-item>
   <ion-label>Senha</ion-label>
   <ion-input type="password" formControlName="password"></ion-input>
   </ion-item>
-  <ion-button (click)="autenticar()" expand="full">Login</ion-button>
-  <ion-button (click)="forgot()" expand="full">Esqueceu sua senha</ion-button>
+  <ion-button (click)="autenticar()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
+    Login
+     
+    <ion-icon name="log-in"></ion-icon>
+  </ion-button>
+  <ion-button (click)="forgot()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
+    Esqueceu sua senha
+     
+    <ion-icon name="key"></ion-icon>
+  </ion-button>
  
-
   </form>
 </ion-content>
+
