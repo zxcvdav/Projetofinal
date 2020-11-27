@@ -31,6 +31,7 @@ const routes: Routes = [
     canActivate : [AngularFireAuthGuard],
     data : {authGuardPipe : redirectToLogin}
   },
+  
   {
     path: 'sair',
     loadChildren: () => import('./sair/sair.module').then( m => m.SairPageModule)
@@ -50,8 +51,11 @@ const routes: Routes = [
   {
     path: 'forgot-password',
     loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   }
-
  
 ];
 

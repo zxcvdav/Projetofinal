@@ -4,12 +4,15 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { NavController, MenuController } from '@ionic/angular';
 import { TemplateService } from '../services/template.service';
 import { Router } from '@angular/router';
+
+
 @Component({
 selector: 'app-login',
 templateUrl: './login.page.html',
 styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+
 formGroup : FormGroup;
 constructor(private formBuilder : FormBuilder,
 private auth : AngularFireAuth,
@@ -41,9 +44,12 @@ this.navCtrl.navigateRoot(['dentais']);
   }
   iniciarForm(){
   this.formGroup= this.formBuilder.group({
+    
   username : ['',[Validators.email] ],
   password: ['', [Validators.required, Validators.minLength(13), Validators.maxLength(16)]]
   })
   }
+  register(){
+    this.router.navigate(['/register']);
   }
-  
+}

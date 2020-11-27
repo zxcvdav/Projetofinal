@@ -15,14 +15,17 @@ export class AppComponent implements OnInit {
     {
       title: 'Dentais',
       url: 'dentais',
-      icon: 'mail'
+      icon: 'albums'
     },
+ 
+  
     {
       title: 'Nova Dental',
       url: 'dental-novo',
-      icon: 'mail'
+      icon: 'add-circle'
     },
-    {
+ 
+    { 
       title: 'Sair',
       url: 'sair',
       icon: 'exit'

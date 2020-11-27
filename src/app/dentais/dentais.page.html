@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary" >
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -12,7 +12,11 @@
   <ion-list>
     <ion-item *ngFor="let dental of lista">
       <ion-label>{{dental.nome}}</ion-label>
-      <ion-button (click)="visualizar(dental)">Visualizar</ion-button>
+      <ion-button (click)="visualizar(dental)" color="tertiary" style="scroll-margin-top: 30px;" size="block">
+        Visualizar
+         
+        <ion-icon name="eye"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
   

@@ -1,10 +1,10 @@
-<ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
+<ion-app style="text-align: center;">
+  <ion-split-pane style="text-align: center;" contentId="main-content">
+    <ion-menu style="text-align: center;" contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>BOX</ion-list-header>
-          <ion-note>CRUD</ion-note>
+        <ion-list style="text-align: center;" id="inbox-list"> 
+  <ion-header><h3>Locate Dental</h3></ion-header>
+          <ion-note>APP DENTAL</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
@@ -15,7 +15,7 @@
         </ion-list>
 
         <ion-list id="labels-list">
-          <ion-list-header>Desenvolvido por David</ion-list-header>
+          <ion-list-header>Desenvolvido por Brunno, David, Marcos e Matheus</ion-list-header>
 
           <ion-item *ngFor="let label of labels" lines="none">
             <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>

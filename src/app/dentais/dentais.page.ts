@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { AlertController, LoadingController, NavController, ToastController } from '@ionic/angular';
 import { Dental } from '../model/dental';
 import { DentalService } from '../services/dental.service';
+
 
 @Component({
   selector: 'app-dentais',
@@ -13,25 +14,27 @@ export class DentaisPage implements OnInit {
   lista : Dental[] = [];
 
   constructor(private dentalServ : DentalService,
-    private navCtrl : NavController) { }
+    private navCtrl : NavController,
+    private alert : AlertController,
+    private toast : ToastController) { }
 
   ngOnInit() {
     this.dentalServ.listaDeDentais().subscribe(response=>{
-      // O servidor respondeu
-      console.log(response); // remover, apenas para testar no console
+    
+      console.log(response); 
       this.lista = response;
-      console.log(this.lista); // remover, apenas para testar no console
+      console.log(this.lista); 
 
       
     },err=>{
-      // erro
+  
     })
   }
 
   visualizar(dental){
     this.navCtrl.navigateForward(['/dental-visualizar',dental.id])
   }
-
+  
 
 
   
