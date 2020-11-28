@@ -41,7 +41,7 @@ async resetPassword(){
   loading.present();
   this.afauth.sendPasswordResetEmail(this.username).then(() => {
     loading.dismiss();
-    this.toast('Please check your email','success');
+    this.toast('Por favor cheque seu email','success');
     this.router.navigate(['/login']);
   })
   .catch((error)=>{
@@ -49,7 +49,7 @@ async resetPassword(){
     this.toast(error.message,'danger');
   })
 } else {
-  this.toast('please enter your email address!','danger');
+  this.toast('Por favor entre com seu email!','danger');
 
 }
 }

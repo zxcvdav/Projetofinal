@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { AlertController, LoadingController, NavController, ToastController } from '@ionic/angular';
+
 import { Dental } from '../model/dental';
+
 import { DentalService } from '../services/dental.service';
 
 
@@ -10,13 +13,15 @@ import { DentalService } from '../services/dental.service';
   styleUrls: ['./dentais.page.scss'],
 })
 export class DentaisPage implements OnInit {
-
+ 
   lista : Dental[] = [];
 
   constructor(private dentalServ : DentalService,
     private navCtrl : NavController,
-    private alert : AlertController,
-    private toast : ToastController) { }
+    private alertCtrl : AlertController,
+    private loading: LoadingController,
+    private toast : ToastController,
+    private afAuth : AngularFireAuth) { }
 
   ngOnInit() {
     this.dentalServ.listaDeDentais().subscribe(response=>{
@@ -35,6 +40,7 @@ export class DentaisPage implements OnInit {
     this.navCtrl.navigateForward(['/dental-visualizar',dental.id])
   }
   
+ 
 
 
   
