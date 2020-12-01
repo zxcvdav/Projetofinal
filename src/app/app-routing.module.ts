@@ -57,7 +57,14 @@ const routes: Routes = [
 
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'uploader',
+    loadChildren: () => import('./uploader/uploader.module').then( m => m.UploaderPageModule)
   }
+
+ 
+
 
  
 ];

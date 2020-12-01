@@ -17,7 +17,12 @@ export class AppComponent implements OnInit {
       url: 'dentais',
       icon: 'albums'
     },
-  
+    {
+      title: 'Enviar e Visualizar Currículo',
+      url: 'uploader',
+      icon: 'albums'
+    },
+ 
     {
       title: 'Nova Dental',
       url: 'dental-novo',

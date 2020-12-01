@@ -10,16 +10,20 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
+
+
 import { environment } from 'src/environments/environment'; 
 import { DentalService } from './services/dental.service';
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
-
+import { Camera } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
 import { AngularFirestore} from '@angular/fire/firestore';
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
+import {AngularFireStorageModule} from '@angular/fire/storage';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 
 @NgModule({
@@ -31,19 +35,24 @@ import { AngularFirestore} from '@angular/fire/firestore';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
-    AngularFirestoreModule,
+    AngularFireStorageModule,
     ReactiveFormsModule,
-    AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireAuthModule
+    
+    
    
    
   ],
   providers: [
     StatusBar,
     AngularFirestore,
-    SplashScreen,
+    SplashScreen, 
+    InAppBrowser,
     DentalService,
-
+    Camera,
+    FileChooser,
+    FilePath,
+    File,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
  
   ],
