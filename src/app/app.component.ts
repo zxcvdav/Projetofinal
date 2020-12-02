@@ -22,7 +22,16 @@ export class AppComponent implements OnInit {
       url: 'uploader',
       icon: 'albums'
     },
- 
+    { 
+      title: 'Material de dentais',
+      url: '',
+      icon: 'clipboard'
+    },
+    { 
+      title: 'Localizar Dental',
+      url: '',
+      icon: 'locate'
+    },
     {
       title: 'Nova Dental',
       url: 'dental-novo',

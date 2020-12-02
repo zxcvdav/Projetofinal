@@ -1,43 +1,47 @@
 <ion-header style="text-align: center;">
   <ion-toolbar color="tertiary">
-    <ion-title>Login</ion-title>
+    <ion-title>Acesso Locate Dental</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="col-md-6 " id="imgion">
-    <img src="https://s2.glbimg.com/meLd5g8VD9GgLGfGuRuv3UHBZ3I=/0x0:2000x1378/984x0/smart/filters:strip_icc()/s.glbimg.com/es/ge/f/original/2019/11/23/2019-11-23t224502z_459218957_rc2ahd9a56v4_rtrmadp_3_soccer-libertadores-fla-riv-report_3BAkRJL.jpg
-    " alt="logo do app dental" id="imgion">
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/xGWnGbb/Logo.png" alt="Logo"></a>
   </div>
-
+<br>
   <form [formGroup]="formGroup">
+    <ion-card-header style="text-align: center;" color="tertiary">
+      <ion-card-title>Bem vindo ao App Locate Dental</ion-card-title>
+      <br>
+      <ion-card-subtitle>Por favor, insira o seu endereço de e-mail e senha</ion-card-subtitle>
+      <br>
+<ion-col text-center>
+  <button ion-button clear color="black" (click)="register()">
+    <p>Quero me cadastrar</p>
+  </button>
+</ion-col>
+    </ion-card-header>
+    <br>
   <ion-item>
-  <ion-label>Email</ion-label>
+  <ion-label><ion-icon name="mail-open"></ion-icon> Email:</ion-label>
   <ion-input type="text" formControlName="username"></ion-input>
   </ion-item>
   <ion-item>
-  <ion-label>Senha</ion-label>
+  <ion-label><ion-icon name="key"></ion-icon> Senha:</ion-label>
   <ion-input type="password" formControlName="password"></ion-input>
   </ion-item>
+  <br>
   <ion-button (click)="autenticar()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
-    Login
-     
+    Entrar
+     <br>
     <ion-icon name="log-in"></ion-icon>
   </ion-button>
-  <ion-button (click)="forgot()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
-    Esqueceu sua senha
-     
-    <ion-icon name="key"></ion-icon>
-  </ion-button>
-
-  <ion-button (click)="register()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
-   Registre-se aqui
-     
-  </ion-button>
-
-
-
+  <br>
+  <ion-col text-center>
+    <button ion-button clear color="red" (click)="forgot()">
+    <p>Esqueceu sua senha?</p>
+    </button>
+  </ion-col>
 
   </form>
 </ion-content>
-

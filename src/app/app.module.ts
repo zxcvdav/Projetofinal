@@ -23,7 +23,7 @@ import { AngularFirestore} from '@angular/fire/firestore';
 import { FileChooser } from '@ionic-native/file-chooser/ngx';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { FilePath } from '@ionic-native/file-path/ngx';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
 
 
 @NgModule({
@@ -47,7 +47,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     StatusBar,
     AngularFirestore,
     SplashScreen, 
-    InAppBrowser,
+ 
     DentalService,
     Camera,
     FileChooser,

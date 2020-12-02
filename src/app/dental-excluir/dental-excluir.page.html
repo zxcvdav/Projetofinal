@@ -1,9 +1,16 @@
 <ion-header style="text-align: center;">
-  <ion-toolbar color="tertiary"> 
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="dentais"></ion-back-button>
+    </ion-buttons>
+    <br>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
     <ion-title>Dental excluir</ion-title>
   </ion-toolbar>
 </ion-header>
-
+<br>
 <ion-content>
   <ion-item>
     <ion-label>Deseja excluir {{dental.nome}}?</ion-label>
