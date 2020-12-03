@@ -18,13 +18,18 @@ export class AppComponent implements OnInit {
       icon: 'albums'
     },
     {
-      title: 'Enviar e Visualizar Currículo',
+      title: 'Sugestões de Dentais',
       url: 'uploader',
       icon: 'albums'
     },
     { 
       title: 'Material de dentais',
-      url: '',
+      url: 'material',
+      icon: 'clipboard'
+    },
+    { 
+      title: 'Details',
+      url: 'details',
       icon: 'clipboard'
     },
     { 

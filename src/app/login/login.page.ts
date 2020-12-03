@@ -6,6 +6,8 @@ import { TemplateService } from '../services/template.service';
 import { Router } from '@angular/router';
 
 
+
+
 @Component({
 selector: 'app-login',
 templateUrl: './login.page.html',
@@ -15,16 +17,18 @@ export class LoginPage implements OnInit {
 
 formGroup : FormGroup;
 constructor(private formBuilder : FormBuilder,
-private auth : AngularFireAuth,
+private afa : AngularFireAuth,
 private navCtrl : NavController,
 private menuCtrl : MenuController,
 private template : TemplateService,
+
 private router: Router
 ) {
 this.iniciarForm();
 }
 ngOnInit() {
 }
+
 forgot(){
   this.router.navigate(['/forgot-password']);
 }
@@ -32,7 +36,7 @@ autenticar() {
 let user = this.formGroup.controls['username'].value;
 let pass = this.formGroup.controls['password'].value;
 this.template.loading.then(load=>{
-this.auth.signInWithEmailAndPassword(user,pass).then(data=>{
+this.afa.signInWithEmailAndPassword(user,pass).then(data=>{
 load.dismiss();
 this.menuCtrl.enable(true);
 this.navCtrl.navigateRoot(['dentais']);
@@ -52,4 +56,6 @@ this.navCtrl.navigateRoot(['dentais']);
   register(){
     this.router.navigate(['/register']);
   }
+
+
 }

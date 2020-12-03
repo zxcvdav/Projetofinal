@@ -61,6 +61,18 @@ const routes: Routes = [
   {
     path: 'uploader',
     loadChildren: () => import('./uploader/uploader.module').then( m => m.UploaderPageModule)
+  },
+  {
+    path: 'details',
+    loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'details/:id',
+    loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'material',
+    loadChildren: () => import('./material/material.module').then( m => m.MaterialPageModule)
   }
 
  

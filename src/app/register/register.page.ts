@@ -24,11 +24,11 @@ async register(){
   try{
     const res= await this.afAuth.createUserWithEmailAndPassword(username,password)
     console.log(res);
-    this.toast('Your account was register with success','success');
+    this.toast('Sua conta foi registrada com sucesso!','success');
     this.router.navigate(['/login']);
   }catch(error){
 console.dir(error);
-this.toast(error.message,'Your account not was register');
+this.toast(error.message,'Sua conta não foi registrada!');
   }
 
 }
