@@ -15,6 +15,8 @@ styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
 
+  tipo:     boolean;
+
 formGroup : FormGroup;
 constructor(private formBuilder : FormBuilder,
 private afa : AngularFireAuth,
@@ -22,13 +24,17 @@ private navCtrl : NavController,
 private menuCtrl : MenuController,
 private template : TemplateService,
 
+
+
 private router: Router
 ) {
 this.iniciarForm();
 }
 ngOnInit() {
 }
-
+exibirOuOcultar(){
+  this.tipo = !this.tipo;
+}
 forgot(){
   this.router.navigate(['/forgot-password']);
 }

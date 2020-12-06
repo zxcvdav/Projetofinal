@@ -11,6 +11,7 @@ import { ToastController } from '@ionic/angular';
 export class RegisterPage implements OnInit {
 username: string=""
 password: string=""
+tipo:     boolean;
   constructor(public afAuth : AngularFireAuth,
     private toastr: ToastController,
     private router: Router
@@ -42,5 +43,7 @@ async toast(message,status)
   });
   toast.present();
 }
-
+exibirOuOcultar(){
+  this.tipo = !this.tipo;
+}
 }

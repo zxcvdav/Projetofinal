@@ -18,9 +18,9 @@ export class AppComponent implements OnInit {
       icon: 'albums'
     },
     {
-      title: 'Sugestões de Dentais',
+      title: 'Upload dos arquivos',
       url: 'uploader',
-      icon: 'albums'
+      icon: 'archive'
     },
     { 
       title: 'Material de dentais',
@@ -28,13 +28,8 @@ export class AppComponent implements OnInit {
       icon: 'clipboard'
     },
     { 
-      title: 'Details',
-      url: 'details',
-      icon: 'clipboard'
-    },
-    { 
       title: 'Localizar Dental',
-      url: '',
+      url: 'localizar',
       icon: 'locate'
     },
     {
