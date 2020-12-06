@@ -8,10 +8,26 @@
 </ion-header>
 
 <ion-content>
+  <ion-card>
+    <ion-card-header>
+      <div class="col-md-6 " id="imgion">
+        <a href="https://imgbb.com/"><img src="https://i.ibb.co/xGWnGbb/Logo.png" alt="Logo"></a>
+      </div>
+      <ion-card-subtitle>Dentais Parceiras</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Nessa parte do App encontramos todas dentais parceiras que oferecem serviços, meteriais e oportunidades de anexar currículos.
+    </ion-card-content>
+  </ion-card>
 
   <ion-list>
     <ion-item *ngFor="let dental of lista">
-      <ion-label>{{dental.nome}}</ion-label>
+      <ion-label><ion-chip>
+        <ion-avatar>
+          <img src="https://blog.suryadental.com.br/wp-content/uploads/2018/10/quanto-gasta-um-estudante-de-odontologia2.jpg">
+        </ion-avatar>
+      </ion-chip>{{dental.nome}}</ion-label>
       <ion-button (click)="visualizar(dental)" color="tertiary" style="scroll-margin-top: 30px;" size="block">
         Visualizar
          
@@ -19,7 +35,13 @@
       </ion-button>
     </ion-item>
   </ion-list>
-  <ion-button (click)="choose()">Anexar Currículo</ion-button>
+
 
 
 </ion-content>
+<ion-footer>
+  <ion-toolbar>
+<ion-button (click)="choose()" expand="block"> Anexar Currículo  <ion-icon name="document"></ion-icon></ion-button>
+
+  </ion-toolbar>
+</ion-footer>

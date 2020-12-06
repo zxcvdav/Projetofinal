@@ -24,8 +24,11 @@
   </ion-item>
   <ion-item>
   <ion-label><ion-icon name="key"></ion-icon> Senha:</ion-label>
-  <ion-input type="password" formControlName="password"></ion-input>
-  </ion-item>
+  <ion-input [type]="tipo ? 'text' : 'password'" formControlName="password"></ion-input>
+  <button (click)="exibirOuOcultar()" ion-button item-right>
+    <ion-icon [name]="tipo ? 'eye-off' : 'eye'"></ion-icon>
+  </button>
+  </ion-item> 
   <br>
   <ion-button (click)="autenticar()" color="tertiary" style="scroll-margin-top: 10px;" size="block">
     Entrar
