@@ -5,6 +5,9 @@ import { Platform } from '@ionic/angular';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
+import { FileChooser } from '@ionic-native/file-chooser/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import firebase from 'firebase/app';
 
 
 
@@ -18,6 +21,8 @@ export class UploaderPage implements OnInit {
   public downloadUrl: Observable<string>;
   
  constructor(
+  private fileChooser: FileChooser,
+  private filePath : FilePath,
   private camera : Camera,
   private platform: Platform,
   private file: File,
@@ -67,5 +72,34 @@ export class UploaderPage implements OnInit {
     task.snapshotChanges().pipe(
       finalize(() => this.downloadUrl = ref.getDownloadURL())
     ).subscribe();
+  }
+  choose() {
+    this.fileChooser.open().then((uri) => {
+      alert(uri);
+
+      this.filePath.resolveNativePath(uri).then(filePath => {
+        alert(filePath);
+        let dirPathSegments = filePath.split('/');
+        let fileName = dirPathSegments[dirPathSegments.length-1];
+        dirPathSegments.pop();
+        let dirPath = dirPathSegments.join('/');
+        this.file.readAsArrayBuffer(dirPath, fileName).then(async (buffer) => {
+          await this.upload(buffer, fileName);
+        }).catch((err) => {
+          alert(err.toString());
+        });
+      });
+    });
+  }
+  async upload(buffer,name){
+    let blob = new Blob([buffer], {type:"image/jpeg/pdf/doc"});
+
+    let storage = firebase.storage();
+
+    storage.ref('images/' + name).put(blob).then((d)=>{
+      alert("Done");
+    }).catch((error)=>{
+      alert(JSON.stringify(error))
+    })
   }
 }

@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
       icon: 'locate'
     },
     {
-      title: 'Nova Dental',
+      title: 'Cadastro de Dentais',
       url: 'dental-novo',
       icon: 'add-circle'
     },
