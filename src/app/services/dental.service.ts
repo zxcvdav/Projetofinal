@@ -63,9 +63,26 @@ export class DentalService{
 
         }));  
     }
+    
+    buscaPorNome(nome: string): Observable<any> {
 
+    
+        return from(new Observable(observe => { 
+            this.firestore.collection('dental').ref.orderBy("nome")
+                .startAt(nome).endAt(nome + "\uf8ff").get().then(response => {
+                    let lista: Dental[] = [];
+                    response.docs.map(obj => {
+                        
+                        let dental: Dental = new Dental();
+                        dental.setData(obj.data());
+                        dental.id = obj.id; 
+                        lista.push(dental); 
+                    });
+                    observe.next(lista);
+                })
 
-
+        }))
+    }
     atualizar(dental : any)  : Observable<any>{
         return from(new Observable(observe => {
 

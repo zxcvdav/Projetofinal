@@ -11,36 +11,37 @@ import { DentalService } from '../services/dental.service';
 })
 export class DentaisPage implements OnInit {
  
-  @ViewChild('map',{static:true}) mapElement: any;
+  @ViewChild("nome") nome; 
 
   lista : Dental[] = [];
-  
+
   constructor(private dentalServ : DentalService,
- 
-    
-    private navCtrl : NavController
-   ) { }
+    private navCtrl : NavController) { }
 
   ngOnInit() {
-    
-
     this.dentalServ.listaDeDentais().subscribe(response=>{
-    
-      console.log(response); 
+      
+      
       this.lista = response;
-      console.log(this.lista); 
+     
 
       
     },err=>{
-  
+    
     })
   }
 
   visualizar(dental){
     this.navCtrl.navigateForward(['/dental-visualizar',dental.id])
   }
+
+  pesquisar(){
+    console.log("Busca por: "+this.nome.value)
+    this.dentalServ.buscaPorNome(this.nome.value).subscribe(response=>{
+      this.lista = [];
+      this.lista = response;
+    });
+  }
   
 
-
- 
 }
