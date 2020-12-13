@@ -1,14 +1,11 @@
 <ion-header style="text-align: center;">
   <ion-toolbar color="tertiary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="dentais"></ion-back-button>
-    </ion-buttons>
-    <br>
     <ion-title  style="text-align: center;">Material das Dentais</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
+  
 </ion-header>
 <br>
 <ion-content>
@@ -18,6 +15,14 @@
   <ion-card-header style="text-align: center;" color="tertiary">
     <ion-card-title>Materiais das dentais</ion-card-title>
   </ion-card-header>
+  <form>
+    <ion-searchbar #nome placeholder="Digite o nome do material..."></ion-searchbar>
+  </form>
+  <ion-button color="tertiary" (click)="pesquisar()">Pesquisar
+    <br>
+    <ion-icon name="search"></ion-icon>
+  </ion-button>
+  <br>
   <ion-list *ngIf="!materiais.length">
     <ion-item *ngFor="let item of [0, 1, 2]">
       <ion-avatar slot="start">
@@ -70,7 +75,7 @@
         
 
         <ion-col size="12">
-          <ion-button style="text-align: center;" routerLink="/details" expand="block">
+          <ion-button color="tertiary" style="text-align: center;" routerLink="/details" expand="block">
             Adicionar Material
             <br>
             
