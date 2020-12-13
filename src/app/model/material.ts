@@ -1,4 +1,5 @@
-export interface Material {
+export class Material {
+   
     id?: string;
     name?: string;
     description?: string;
@@ -6,4 +7,6 @@ export interface Material {
     price?: string;
     createdAt?: number;
     userId?: string;
+
+    
 }

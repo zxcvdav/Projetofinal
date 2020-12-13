@@ -17,7 +17,7 @@ export class Dental {
         this.estado = objFirebase.estado;
         this.nome = objFirebase.nome;
         this.numero = objFirebase.numero;
-        this.telefone = objFirebase.telefone
+        this.telefone = objFirebase.telefone;
     }
     
     }

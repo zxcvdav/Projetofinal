@@ -1,13 +1,17 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { from, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Dental } from '../model/dental';
+import {Material} from '../model/material';
 
 @Injectable()
 export class DentalService{
     dental : Dental = new Dental();
-
-    constructor(private firestore: AngularFirestore){
+    material : Material = new Material();
+    private materialCollection: AngularFirestoreCollection<Material>;
+    constructor(private firestore: AngularFirestore,
+        ){
 
     }
 
@@ -85,6 +89,7 @@ export class DentalService{
 
         })); 
     }
+  
 
 
 }
