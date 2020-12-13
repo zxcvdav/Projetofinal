@@ -46,7 +46,7 @@ export class UploaderPage implements OnInit {
 
       let file: string;
 
-      if(this.platform.is('ios')) {
+      if(this.platform.is('android')) {
         file = fileUri.split('/').pop();
       }else{
         file = fileUri.substring(fileUri.lastIndexOf('/') + 1, fileUri.indexOf('?'));

@@ -42,4 +42,5 @@ export class MaterialService {
   deleteMaterial(id: string) {
     return this.materiaisCollection.doc(id).delete();
   }
+  
 }

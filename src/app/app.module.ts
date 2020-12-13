@@ -23,7 +23,7 @@ import { AngularFirestore} from '@angular/fire/firestore';
 import { FileChooser } from '@ionic-native/file-chooser/ngx';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { FilePath } from '@ionic-native/file-path/ngx';
-import { GoogleMaps } from '@ionic-native/google-maps';
+
 
 
 @NgModule({
@@ -47,7 +47,6 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     StatusBar,
     AngularFirestore,
     SplashScreen, 
-    GoogleMaps,
     DentalService,
     Camera,
     FileChooser,

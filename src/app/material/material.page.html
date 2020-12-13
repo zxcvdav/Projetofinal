@@ -12,6 +12,7 @@
   <div class="col-md-6 " id="imgion">
     <a href="https://imgbb.com/"><img src="https://i.ibb.co/xGWnGbb/Logo.png" alt="Logo"></a>
   </div>
+
   <ion-card-header style="text-align: center;" color="tertiary">
     <ion-card-title>Materiais das dentais</ion-card-title>
   </ion-card-header>
@@ -23,6 +24,8 @@
     <ion-icon name="search"></ion-icon>
   </ion-button>
   <br>
+
+ 
   <ion-list *ngIf="!materiais.length">
     <ion-item *ngFor="let item of [0, 1, 2]">
       <ion-avatar slot="start">
@@ -41,7 +44,7 @@
       </ion-label>
     </ion-item>
   </ion-list>
-
+ 
   <ion-list>
     <ion-item-sliding *ngFor="let material of materiais">
       <ion-item button [routerLink]="['/details', material.id]">
