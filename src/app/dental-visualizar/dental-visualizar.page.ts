@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { Dental } from '../model/dental';
@@ -10,7 +10,7 @@ import { DentalService } from '../services/dental.service';
   styleUrls: ['./dental-visualizar.page.scss'],
 })
 export class DentalVisualizarPage implements OnInit {
-
+ 
 dental : Dental = new Dental();
 
   constructor(private dentalServ : DentalService,
@@ -35,8 +35,10 @@ dental : Dental = new Dental();
     this.navCtrl.navigateForward(['/dental-atualizar',this.dental.id]);
   }
 
+
   excluir(){
     this.navCtrl.navigateForward(['/dental-excluir',this.dental.id]);
   }
+  
 
 }

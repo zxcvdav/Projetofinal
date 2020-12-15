@@ -27,11 +27,7 @@ export class AppComponent implements OnInit {
       url: 'material',
       icon: 'clipboard'
     },
-    { 
-      title: 'Localizar Dental',
-      url: 'localizar',
-      icon: 'locate'
-    },
+
     {
       title: 'Cadastro de Dentais',
       url: 'dental-novo',
