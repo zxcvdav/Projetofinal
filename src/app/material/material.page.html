@@ -16,14 +16,7 @@
   <ion-card-header style="text-align: center;" color="tertiary">
     <ion-card-title>Materiais das dentais</ion-card-title>
   </ion-card-header>
-  <form>
-    <ion-searchbar #nome placeholder="Digite o nome do material..."></ion-searchbar>
-  </form>
-  <ion-button color="tertiary" (click)="pesquisar()">Pesquisar
-    <br>
-    <ion-icon name="search"></ion-icon>
-  </ion-button>
-  <br>
+  
 
  
   <ion-list *ngIf="!materiais.length">
